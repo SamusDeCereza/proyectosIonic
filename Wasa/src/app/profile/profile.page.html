@@ -1,0 +1,73 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <nav class="nav-bar">
+
+        <div>
+          <ion-icon name="arrow-back" (click)="goToSettings()"></ion-icon>
+
+          <h4>Perfil</h4>
+        </div>
+
+        
+
+      </nav>
+    </ion-toolbar>
+  </ion-header>
+
+  <section class="profiles" >
+
+    <article class="profile">
+
+      <div class="profile-div1">
+
+        <ion-avatar slot="start">
+          <img alt="Silhouette of mountains" [src]="'https://picsum.photos/80/80?random=1'" />
+        </ion-avatar>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <section class="settings">
+
+    <article class="setting">
+
+      <ion-icon name="person-outline"></ion-icon>
+
+      <div>
+        <h1>Nombre</h1>
+        <p>Cereza</p>
+      </div>
+
+    </article>
+
+    <article class="setting">
+
+      <ion-icon name="information-circle-outline"></ion-icon>
+
+      <div>
+        <h1>Info.</h1>
+        <p>Alo</p>
+      </div>
+
+    </article>
+
+    <article class="setting">
+
+      <ion-icon name="call-outline"></ion-icon>
+
+      <div>
+        <h1>Teléfono.</h1>
+        <p>271 162 3439</p>
+      </div>
+
+    </article>
+
+  </section>
+
+
+</ion-content>

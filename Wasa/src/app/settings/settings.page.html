@@ -1,0 +1,79 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <nav class="nav-bar">
+
+        <div>
+          <ion-icon name="arrow-back" (click)="goToHome()"></ion-icon>
+
+          <h4>Ajustes</h4>
+        </div>
+
+        <ion-icon name="search"></ion-icon>
+
+      </nav>
+    </ion-toolbar>
+  </ion-header>
+
+  <section class="profiles" (click)="goToProfile()">
+
+    <article class="profile">
+
+      <div class="profile-div1">
+
+        <ion-avatar slot="start">
+          <img alt="Silhouette of mountains" [src]="'https://picsum.photos/80/80?random=1'" />
+        </ion-avatar>
+  
+        <div>
+          <h1>Cereza</h1>
+          <p color="medium">Disponible</p>
+        </div>
+
+      </div>
+
+      <div class="profile-div2">
+      
+        <ion-icon name="qr-code-outline" color="success"></ion-icon>
+        <ion-icon name="add-circle-outline" color="success"></ion-icon>
+
+      </div>
+
+
+    </article>
+
+  </section>
+
+  <section class="settings">
+
+    <article class="setting">
+
+      <ion-icon name="key"></ion-icon>
+
+      <div>
+        <h1>Cuenta</h1>
+        <p>Notificaciones</p>
+      </div>
+
+    </article>
+
+  </section>
+
+  <p class="meta">También de meta</p>
+
+  <section class="meta-section">
+
+    <article class="meta-article">
+
+      <ion-icon name="logo-instagram"></ion-icon>
+
+      <div>
+        <h1>Abrir instagram</h1>
+      </div>
+
+    </article>
+
+  </section>
+
+</ion-content>

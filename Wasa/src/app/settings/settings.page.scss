@@ -1,0 +1,101 @@
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px 5px 15px;
+}
+
+.nav-bar h4{
+    font-size: 20px;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.nav-bar div{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ion-icon{
+    width: 21   px;
+    height: 21px;
+}
+
+.profiles{
+    margin-top: 20px;
+    display: block;
+}
+
+.profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.profile ion-avatar{
+    
+}
+
+.profile-div1{
+    display: flex;
+    align-items: center;
+    
+}
+
+.profile-div1 div{
+    margin-left: 10px;
+    
+}
+
+.profile h1, .settings h1, .meta-article h1{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.profile p , .settings p, .meta{
+    font-size: 10px;
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+.profile ion-icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.settings{
+    margin-top: 20px;
+}
+
+.setting{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.setting div{
+    margin-left: 20px;
+}
+
+.setting ion-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.meta-article{
+    display: flex;
+    padding: 20px;
+}
+
+.meta-article ion-icon{
+    margin-right: 20px;
+    width: 25px;
+    height: 25px;
+}
+
+.meta{
+    margin-left: 20px;
+}

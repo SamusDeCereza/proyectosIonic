@@ -1,0 +1,333 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<!-- <ion-content [fullscreen]="true">
+  
+</ion-content> ayuda -->
+
+<ion-tabs>
+    <ion-tab tab="home">
+
+        <ion-fab vertical="bottom" horizontal="end" class="overlay-buttons">
+            <ion-fab-button color="light" class="meta">
+                <ion-icon name="ellipse-outline"></ion-icon>
+            </ion-fab-button>
+
+            <ion-fab-button color="success" class="chat">
+                <ion-icon name="chatbubbles-outline" color="light"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+
+        <div id="home-page ">
+            <ion-header>
+                <ion-toolbar>
+
+                    <section>
+
+                        <div>
+                            <h1>WhatsApp</h1>
+                        </div>
+
+                        <div>
+                            <ion-icon name="camera-outline"></ion-icon>
+
+                            <ion-buttons slot="start">
+                                <ion-menu-button name="menu-outline"></ion-menu-button>
+                            </ion-buttons>
+
+
+                        </div>
+
+                    </section>
+
+                </ion-toolbar>
+            </ion-header>
+
+            <ion-menu contentId="main-content" type="overlay" side="end">
+                <div class="mainMenu">
+                    <h1 (click)="goToSettings() ">Ajustes</h1>
+                </div>
+            </ion-menu>
+            <div class="ion-page" id="main-content">
+            </div>
+
+            <ion-content [fullscreen]="true ">
+
+
+                <div class="tab-content">
+
+                    <ion-searchbar class="custom-bar" placeholder="Buscar..."></ion-searchbar>
+
+                    <section class="chats-filters">
+
+                        <ion-chip color="medium">
+                            <p>Todos</p>
+                        </ion-chip>
+
+                        <ion-chip color="medium">
+                            <p>No leídos</p>
+                        </ion-chip>
+
+                        <ion-chip color="medium">
+                            <p>Favoritos</p>
+                        </ion-chip>
+
+                        <ion-chip color="medium">
+                            <p>Grupos</p>
+                        </ion-chip>
+
+                        <ion-chip color="medium">
+                            <p>+</p>
+                        </ion-chip>
+
+                        <ion-chip color="medium">
+                            <p>Extra</p>
+                        </ion-chip>
+
+                        <ion-chip>Default</ion-chip>
+
+                    </section>
+
+
+
+                    <section class="chats">
+
+
+
+                    </section>
+
+                    <ion-list>
+                        @for (item of items; track item; let index = $index) {
+                        <ion-item>
+                            <ion-avatar slot="start">
+                                <img [src]=" 'https://picsum.photos/80/80?random=' + index" alt="avatar" />
+                            </ion-avatar>
+
+                            <article class="chat-card">
+                                <div class="chat-div1">
+                                    <h1>{{ item }}</h1>
+
+                                    <h2>Mensaje</h2>
+                                </div>
+
+                                <div class="chat-div2">
+
+
+                                    <div class="noSeQueHacer">
+                                        <p color="medium">Fecha</p>
+                                    </div>
+
+                                    <div class="noSeQueHacer">
+                                        <ion-icon color="medium" name="notifications"></ion-icon>
+                                    </div>
+
+
+
+                                </div>
+                            </article>
+
+                        </ion-item>
+                        }
+                    </ion-list>
+                    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+                        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+                    </ion-infinite-scroll>
+
+
+
+                </div>
+            </ion-content>
+        </div>
+    </ion-tab>
+    <ion-tab tab="radio">
+        <div id="radio-page">
+            <ion-header>
+                <ion-toolbar>
+
+                    <section>
+
+                        <div>
+                            <h1>Novedades</h1>
+                        </div>
+
+                        <div>
+                            <ion-icon name="search"></ion-icon>
+                            <ion-icon name="menu-outline"></ion-icon>
+                        </div>
+
+                    </section>
+
+                </ion-toolbar>
+            </ion-header>
+            <ion-content [fullscreen]="true">
+                <div class="news-content">
+
+                    <section class="states">
+
+                        <h4>Estados</h4>
+
+                        <div class="state-card">
+
+                            <ion-avatar slot="start">
+                                <img alt="Silhouette of mountains" [src]="'https://picsum.photos/80/80?random=1'" />
+                            </ion-avatar>
+
+                            <div>
+                                <h1>Mi estado</h1>
+                                <p color="medium">Añade una actualización</p>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="state-card">
+
+                            <ion-avatar slot="start">
+                                <img alt="Silhouette of mountains" [src]="'https://picsum.photos/80/80?random=3'" />
+                            </ion-avatar>
+
+                            <div>
+                                <h1>Estado 1</h1>
+                                <p color="medium">Ayer</p>
+                            </div>
+
+                        </div>
+
+                        <div class="state-card">
+
+                            <ion-avatar slot="start">
+                                <img alt="Silhouette of mountains" [src]="'https://picsum.photos/80/80?random=11'" />
+                            </ion-avatar>
+
+                            <div>
+                                <h1>Estado 2</h1>
+                                <p color="medium">12:00am</p>
+                            </div>
+
+                        </div>
+
+                        <div class="state-card">
+
+                            <ion-avatar slot="start">
+                                <img alt="Silhouette of mountains" [src]="'https://picsum.photos/80/80?random=4'" />
+                            </ion-avatar>
+
+                            <div>
+                                <h1>Estado 3</h1>
+                                <p color="medium">Ayer</p>
+                            </div>
+
+                        </div>
+
+
+
+                    </section>
+
+                    <section class="channels">
+
+                        <h4>Canales</h4>
+
+                        <p color="medium" class="channels-description">Conoce las últimas novedades de los temas que te interesan. A continuación, busca canales para seguir.
+                        </p>
+
+                        <p color="medium" class="channels-description">Busca canales para seguir</p>
+
+                        <div class="channel-card">
+
+                            <div class="channel-div1">
+
+                                <ion-avatar slot="start">
+                                    <img alt="Silhouette of mountains" [src]="'https://picsum.photos/80/80?random=465'" />
+                                </ion-avatar>
+
+                                <div>
+                                    <h1>Canal 1</h1>
+                                    <p color="medium">2.9 mil seguidores</p>
+                                </div>
+
+                            </div>
+
+                            <ion-chip color="success">
+                                <p>Seguir</p>
+                            </ion-chip>
+
+                        </div>
+
+                        <div class="channel-card">
+
+                            <div class="channel-div1">
+
+                                <ion-avatar slot="start">
+                                    <img alt="Silhouette of mountains" [src]="'https://picsum.photos/80/80?random=46'" />
+                                </ion-avatar>
+
+                                <div>
+                                    <h1>Canal 2</h1>
+                                    <p color="medium">3.1 mil seguidores</p>
+                                </div>
+
+                            </div>
+
+                            <ion-chip color="success">
+                                <p>Seguir</p>
+                            </ion-chip>
+
+                        </div>
+
+
+                    </section>
+
+                </div>
+            </ion-content>
+        </div>
+    </ion-tab>
+    <ion-tab tab="library">
+        <div id="library-page">
+            <ion-header>
+                <ion-toolbar>
+                    <ion-title>Comunidades</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+                <div class="example-content">Library content</div>
+            </ion-content>
+        </div>
+    </ion-tab>
+    <ion-tab tab="search">
+        <div id="search-page">
+            <ion-header>
+                <ion-toolbar>
+                    <ion-title>Llamadas</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+                <div class="example-content">Search content</div>
+            </ion-content>
+        </div>
+    </ion-tab>
+
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home" class="icon-container">
+            <ion-icon name="chatbox-outline"></ion-icon>
+            Chats
+        </ion-tab-button>
+        <ion-tab-button tab="radio" class="icon-container">
+            <ion-icon name="chatbubble-outline "></ion-icon>
+            Novedades
+        </ion-tab-button>
+        <ion-tab-button tab="library" class="icon-container">
+            <ion-icon name="people-circle-outline"></ion-icon>
+            Comunidades
+        </ion-tab-button>
+        <ion-tab-button tab="search" class="icon-container">
+            <ion-icon name="call-outline"></ion-icon>
+            Llamadas
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>

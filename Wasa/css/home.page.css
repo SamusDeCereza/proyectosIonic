@@ -1,0 +1,208 @@
+.mainMenu {
+  background-color: rgb(34, 34, 34);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  margin-top: 45px;
+}
+
+.mainMenu h1 {
+  color: white;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+ion-menu {
+  --width: 50%;
+  --height: auto;
+  --background: none;
+  background: none;
+}
+
+ion-toolbar section {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 10px;
+}
+
+ion-toolbar ion-icon {
+  margin-left: 15px;
+  height: 26px;
+  width: 26px;
+}
+
+ion-toolbar div {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ion-toolbar h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+ion-tab-bar {
+  padding: 10px 0 10px 0;
+}
+
+ion-tab-button {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.icon-container ion-icon {
+  margin-bottom: 10px;
+}
+
+ion-searchbar.custom-bar {
+  --border-radius: 15px;
+}
+
+.tab-content {
+  width: 100%;
+}
+
+.chats-filters {
+  display: inline-flex;
+  overflow-x: scroll;
+}
+
+.chats-filters ion-chip {
+  padding: 0 10px 0 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.chats-filters ion-chip p {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.chat-card {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.chat-div1 {
+  margin: 0;
+  padding: 0;
+}
+
+.chat-div2 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.chat-card h1 {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-card h2 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 5px 0 5px 0;
+  padding: 0;
+}
+
+.chat-card ion-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.chat-div2 p {
+  display: flex;
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+}
+
+.noSeQueHacer {
+  height: 45%;
+}
+
+.news-content h4 {
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.state-card {
+  display: flex;
+  padding: 10px;
+}
+
+.state-card ion-avatar {
+  margin: 0 15px 0 0;
+}
+
+.state-card h1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+.state-card p {
+  font-size: 10px;
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+
+.channels-description {
+  font-size: 13px;
+  padding: 15px;
+}
+
+.channel-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.channel-card h1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+.channel-card p {
+  font-size: 10px;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+.channel-div1 {
+  display: flex;
+}
+
+.channel-card ion-avatar {
+  margin: 0 10px 0 10px;
+}
+
+.channel-card ion-chip {
+  margin: 0 10px 0 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+  --padding-left: 15px;
+  --padding-right: 15px;
+}
+
+.channel-card ion-chip p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}/*# sourceMappingURL=home.page.css.map */

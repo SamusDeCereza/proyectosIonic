@@ -1,0 +1,7 @@
+{
+  "name": "Wasa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
