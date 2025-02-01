@@ -1,0 +1,3 @@
+# Ignorar caché de Angular
+.angular/cache/
+Wasa/.angular/cache/
