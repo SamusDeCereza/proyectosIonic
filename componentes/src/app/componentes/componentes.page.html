@@ -1,0 +1,654 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+
+    <ion-item color="1">
+      <h1>Componentes de Ionic</h1>
+    </ion-item>
+
+  </ion-header>
+
+  <main>
+
+    <ion-card color="white2">
+      <ion-card-header>
+        <ion-card-title>Action Sheet</ion-card-title>
+        <ion-card-subtitle>Permite mostra un pequenio menu</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-button id="open-action-sheet" color="1">Open</ion-button>
+        <ion-action-sheet trigger="open-action-sheet" header="Actions"></ion-action-sheet>
+        
+        <script>
+          var actionSheet = document.querySelector('ion-action-sheet');
+        
+          actionSheet.buttons = [
+            {
+              text: 'Delete',
+              role: 'destructive',
+              data: {
+                action: 'delete',
+              },
+            },
+            {
+              text: 'Share',
+              data: {
+                action: 'share',
+              },
+            },
+            {
+              text: 'Cancel',
+              role: 'cancel',
+              data: {
+                action: 'cancel',
+              },
+            },
+          ];
+        </script>
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>Button</ion-card-title>
+        <ion-card-subtitle>Botones multifuncionales</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-button color="1">Default</ion-button> <ion-button disabled="true" color="1">Disabled</ion-button>
+      </ion-card-content>
+
+
+      <ion-card-header>
+        <ion-card-title>Badge</ion-card-title>
+        <ion-card-subtitle>Utiles para mostrar cantidades</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list color="white" class="component-container">
+          <ion-item>
+            <ion-badge slot="start" color="1">11</ion-badge>
+            <ion-label>Badge in start slot</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-badge slot="end" color="1">22</ion-badge>
+            <ion-label>Badge in end slot</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+
+    </ion-card>
+
+
+    <ion-card color="white2">
+
+      <ion-card-header >
+        <ion-card-title>Alert</ion-card-title>
+        <ion-card-subtitle>Muestra un mensaje al usuario</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-button color="1" id="present-alert">Click Me</ion-button>
+<ion-alert
+  trigger="present-alert"
+  header="A Short Title Is Best"
+  sub-header="A Sub Header Is Optional"
+  message="A message should be a short, complete sentence."
+></ion-alert>
+
+<script>
+  const alert = document.querySelector('ion-alert');
+  alert.buttons = ['Action'];
+</script>
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>CheckBox</ion-card-title>
+        <ion-card-subtitle>Util para mostrar multiples opciones</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-checkbox color="1">I agree to the terms and conditions</ion-checkbox>
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>Chip</ion-card-title>
+        <ion-card-subtitle>Pequenios contenedores</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-chip color="1">Default</ion-chip>
+        <ion-chip color="1" disabled="true">Disabled</ion-chip>
+        <ion-chip color="1" outline="true">Outline</ion-chip>
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card color="white2">
+
+      <ion-card-header>
+        <ion-card-title>DateTime</ion-card-title>
+        <ion-card-subtitle>Permite ingresar fechas</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content class="ion-margin-top" color="white">
+        <ion-datetime color="1"></ion-datetime>
+      </ion-card-content>
+
+
+      <ion-card-header>
+        <ion-card-title>Fab</ion-card-title>
+        <ion-card-subtitle>Contenedor flotante para elementos</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content class="ion-padding ion-margin-bottom">
+        <ion-fab class="ion-padding-bottom" vertical="top" horizontal="end" slot="fixed">
+          <ion-fab-button color="1" class="ion-margin-bottom">
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </ion-card-content>
+
+
+      <ion-card-header class="ion-margin-top ion-padding-top">
+        <ion-card-title>Icon</ion-card-title>
+        <ion-card-subtitle>Muestra iconos</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-icon name="logo-ionic"></ion-icon>
+        <ion-icon name="logo-ionic" size="large"></ion-icon>
+        <ion-icon name="logo-ionic" color="primary"></ion-icon>
+        <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card color="white2">
+
+      <ion-card-header>
+        <ion-card-title>Grid</ion-card-title>
+        <ion-card-subtitle>Sistema para construir disenios</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-grid fixed="true">
+          <ion-row>
+            <ion-col>1</ion-col>
+            <ion-col>2</ion-col>
+            <ion-col>3</ion-col>
+          </ion-row>
+        </ion-grid>
+        
+        <style>
+          ion-col {
+            background-color: #135d54;
+            border: solid 1px #fff;
+            color: #fff;
+            text-align: center;
+          }
+        </style>
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>Input</ion-card-title>
+        <ion-card-subtitle>Elementos para ingresar datos</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list class="component-container">
+          <ion-item color="1">
+            <ion-input label="Default input"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-input label="Input with placeholder" placeholder="Enter company name"></ion-input>
+          </ion-item>
+        
+          <ion-item color="1">
+            <ion-input label="Input with value" value="121 S Pinckney St #300"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-input label="Readonly input" value="Madison" readonly="true"></ion-input>
+          </ion-item>
+        
+          <ion-item color="1">
+            <ion-input label="Disabled input" value="53703" disabled="true"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>Item</ion-card-title>
+        <ion-card-subtitle>Elementos que contienen componentes</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content class="component-container">
+        <article class="component-container">
+
+          <ion-item>
+            <ion-label>Basic Item</ion-label>
+          </ion-item>
+          
+          <ion-item color="1">
+            <ion-label>
+              Multi-line text that should wrap when it is too long to fit on one line. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </ion-label>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label class="ion-text-nowrap">
+              Multi-line text that should ellipsis when it is too long to fit on one line. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </ion-label>
+          </ion-item>
+          
+          <ion-item color="1">
+            <ion-label>
+              <h1>H1 Heading</h1>
+              <p>Paragraph</p>
+            </ion-label>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>
+              <h2>H2 Heading</h2>
+              <p>Paragraph</p>
+            </ion-label>
+          </ion-item>
+          
+          <ion-item color="1">
+            <ion-label>
+              <h3>H3 Heading</h3>
+              <p>Paragraph</p>
+            </ion-label>
+          </ion-item>
+
+        </article>
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card color="white2">
+
+      <ion-card-header>
+        <ion-card-title>List</ion-card-title>
+        <ion-card-subtitle>Contiene multiples filas de elementos</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list class="component-container">
+          <ion-item color="1">
+            <ion-label>Pokémon Yellow</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Mega Man X</ion-label>
+          </ion-item>
+          <ion-item color="1">
+            <ion-label>The Legend of Zelda</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Pac-Man</ion-label>
+          </ion-item>
+          <ion-item color="1">
+            <ion-label>Super Mario World</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+
+
+      <ion-card-header>
+        <ion-card-title>Modal</ion-card-title>
+        <ion-card-subtitle>Ventana emergente</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Inline Modal</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-button id="open-modal" expand="block">Open</ion-button>
+          <p id="message">This modal example uses triggers to automatically open a modal when the button is clicked.</p>
+          <ion-modal trigger="open-modal">
+            <ion-header>
+              <ion-toolbar>
+                <ion-buttons slot="start">
+                  <ion-button onclick="cancel()">Cancel</ion-button>
+                </ion-buttons>
+                <ion-title>Welcome</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button onclick="confirm()" strong="true">Confirm</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+              <ion-item>
+                <ion-input label="Enter your name" label-placement="stacked" type="text" placeholder="Your name"></ion-input>
+              </ion-item>
+            </ion-content>
+          </ion-modal>
+        </ion-content>
+        
+        <script>
+          var modal = document.querySelector('ion-modal');
+        
+          function cancel() {
+            modal.dismiss(null, 'cancel');
+          }
+        
+          function confirm() {
+            const input = document.querySelector('ion-input');
+            modal.dismiss(input.value, 'confirm');
+          }
+        
+          modal.addEventListener('willDismiss', (event) => {
+            if (event.detail.role === 'confirm') {
+              const message = document.querySelector('#message');
+              message.textContent = `Hello ${event.detail.data}!`;
+            }
+          });
+        </script>
+
+      </ion-card-content>
+
+
+      <ion-card-header>
+        <ion-card-title>Menu</ion-card-title>
+        <ion-card-subtitle>Componente de navegacion</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-content>
+
+          <ion-menu type="overlay" content-id="main-content">
+            <ion-header>
+              <ion-toolbar>
+                <ion-title>Menu Content</ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">This is the menu content.</ion-content>
+          </ion-menu>
+          <div class="ion-page" id="main-content">
+            <ion-header>
+              <ion-toolbar>
+                <ion-buttons slot="start">
+                  <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <ion-title>Menu</ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+          </div>
+
+        </ion-content>
+        
+      </ion-card-content>
+
+
+
+    </ion-card>
+
+    <ion-card color="white2">
+
+      <ion-card-header>
+        <ion-card-title>PopOver</ion-card-title>
+        <ion-card-subtitle>Pequenio mensaje flotante</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        
+        <ion-button color="1" id="click-trigger">Left-Click Me</ion-button>
+        <ion-popover trigger="click-trigger" trigger-action="click">
+          <ion-content class="ion-padding">Hello World!</ion-content>
+        </ion-popover>
+
+        <ion-button color="1" id="context-menu-trigger">Right-Click Me</ion-button>
+        <ion-popover trigger="context-menu-trigger" trigger-action="context-menu">
+          <ion-content class="ion-padding">Hello World!</ion-content>
+        </ion-popover>
+
+        <ion-button color="1" id="hover-trigger">Hover Over Me</ion-button>
+        <ion-popover trigger="hover-trigger" trigger-action="hover">
+          <ion-content class="ion-padding">Hello World!</ion-content>
+        </ion-popover>
+
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>Progress Bar</ion-card-title>
+        <ion-card-subtitle>No se como explicar algo asi</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-progress-bar color="1"></ion-progress-bar>
+
+<script>
+  let progress = 0;
+  let progressBar = document.querySelector('ion-progress-bar');
+
+  setInterval(() => {
+    progressBar.value = progress += 0.01;
+
+    // Reset the progress bar when it reaches 100%
+    // to continuously show the demo
+    if (progress > 1) {
+      setTimeout(() => {
+        progressBar.value = progress = 0;
+      }, 1000);
+    }
+  }, 50);
+</script>
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>Radio Button</ion-card-title>
+        <ion-card-subtitle>Para crear un grupo de opciones</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-radio-group value="strawberries">
+          <ion-radio color="1" value="grapes">Grapes</ion-radio><br />
+          <ion-radio color="1" value="strawberries">Strawberries</ion-radio><br />
+          <ion-radio color="1" value="pineapple">Pineapple</ion-radio><br />
+          <ion-radio color="1" value="cherries">Cherries</ion-radio>
+        </ion-radio-group>
+        
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card color="white2">
+
+      <ion-card-header>
+        <ion-card-title>Refresher</ion-card-title>
+        <ion-card-subtitle>Para refrescarte</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Pull to Refresh</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        
+        <ion-content class="ion-padding">
+          <ion-refresher id="refresher" slot="fixed">
+            <ion-refresher-content></ion-refresher-content>
+          </ion-refresher>
+        
+          <p>Pull this content down to trigger the refresh.</p>
+        </ion-content>
+        
+        <script>
+          const refresher = document.getElementById('refresher');
+        
+          refresher.addEventListener('ionRefresh', () => {
+            setTimeout(() => {
+              // Any calls to load data go here
+              refresher.complete();
+            }, 2000);
+          });
+        </script>
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>Reorder</ion-card-title>
+        <ion-card-subtitle>Permite mover de posicion elementos</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
+          <ion-reorder-group disabled="false">
+            <ion-item color="1">
+              <ion-label> Item 1 </ion-label>
+              <ion-reorder slot="end"></ion-reorder>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label> Item 2 </ion-label>
+              <ion-reorder slot="end"></ion-reorder>
+            </ion-item>
+        
+            <ion-item color="1">
+              <ion-label> Item 3 </ion-label>
+              <ion-reorder slot="end"></ion-reorder>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label> Item 4 </ion-label>
+              <ion-reorder slot="end"></ion-reorder>
+            </ion-item>
+        
+            <ion-item color="1">
+              <ion-label> Item 5 </ion-label>
+              <ion-reorder slot="end"></ion-reorder>
+            </ion-item>
+          </ion-reorder-group>
+        </ion-list>
+        
+        <script>
+          const reorderGroup = document.querySelector('ion-reorder-group');
+        
+          reorderGroup.addEventListener('ionItemReorder', ({ detail }) => {
+            // The `from` and `to` properties contain the index of the item
+            // when the drag started and ended, respectively
+            console.log('Dragged from index', detail.from, 'to', detail.to);
+        
+            // Finish the reorder and position the item in the DOM based on
+            // where the gesture ended. This method can also be called directly
+            // by the reorder group
+            detail.complete();
+          });
+        </script>
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>SearchBar</ion-card-title>
+        <ion-card-subtitle>Barras de busqueda</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-searchbar color="1"></ion-searchbar>
+        <ion-searchbar color="1" placeholder="Custom Placeholder"></ion-searchbar>
+        <ion-searchbar color="1" disabled="true" placeholder="Disabled"></ion-searchbar>
+        <ion-searchbar color="1" value="Value"></ion-searchbar>
+        <ion-searchbar color="1" animated="true" placeholder="Animated"></ion-searchbar>
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card color="white2">
+
+      <ion-card-header>
+        <ion-card-title>Segmento</ion-card-title>
+        <ion-card-subtitle>Permite seleccionar entre 2 opciones</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-segment value="default">
+          <ion-segment-button color="1" value="default">
+            <ion-label>Default</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="segment">
+            <ion-label>Segment</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        
+        <ion-segment disabled="true" value="disabled">
+          <ion-segment-button color="1" value="disabled">
+            <ion-label>Disabled</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="segment">
+            <ion-label>Segment</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>Select</ion-card-title>
+        <ion-card-subtitle>Permite mostrar una lista de opciones</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list class="component-container">
+          <ion-item>
+            <ion-select label="Default label" placeholder="Favorite Fruit">
+              <ion-select-option value="apple">Apple</ion-select-option>
+              <ion-select-option value="banana">Banana</ion-select-option>
+              <ion-select-option value="orange">Orange</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item color="1">
+            <ion-select color="1" label="Fixed label" label-placement="fixed" placeholder="Favorite fruit">
+              <ion-select-option value="apple">Apple</ion-select-option>
+              <ion-select-option value="banana">Banana</ion-select-option>
+              <ion-select-option value="orange">Orange</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item>
+            <ion-select label="Stacked label" label-placement="stacked">
+              <ion-select-option value="apple">Apple</ion-select-option>
+              <ion-select-option value="banana">Banana</ion-select-option>
+              <ion-select-option value="orange">Orange</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item color="1">
+            <ion-select color="1" label="Floating label" label-placement="floating">
+              <ion-select-option value="apple">Apple</ion-select-option>
+              <ion-select-option value="banana">Banana</ion-select-option>
+              <ion-select-option value="orange">Orange</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>Toast</ion-card-title>
+        <ion-card-subtitle>Muestra una pequenia notificacion</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Inline Toast</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-button id="open-toast" color="1" expand="block">Open</ion-button>
+          <p id="message">This toast example uses triggers to automatically open a toast when the button is clicked.</p>
+          <ion-toast trigger="open-toast" message="This toast will disappear after 5 seconds" duration="5000"></ion-toast>
+        </ion-content>
+      </ion-card-content>
+
+    </ion-card>
+
+
+  </main>
+</ion-content>

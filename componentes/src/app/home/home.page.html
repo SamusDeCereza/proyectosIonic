@@ -1,0 +1,29 @@
+
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+
+    <ion-card color="white2" class="ion-padding"> 
+
+      <ion-title class="ion-margin-bottom">
+        <h1>Inicia Sesion</h1>
+      </ion-title>
+  
+      <ion-item class="ion-margin" color="white">
+        <ion-input [(ngModel)]='email' placeholder="Email"></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-margin" color="white">
+        <ion-input [(ngModel)]='password' type="password" placeholder="Contrasenia"></ion-input>
+      </ion-item>
+
+      <ion-button color="1"  (click)="clickSesion()">Iniciar sesion</ion-button>
+
+      <ion-button color="1" (click)="clickRegistrarse()">Registrarse</ion-button>
+
+
+
+    </ion-card>
+
+  </div>
+</ion-content>
