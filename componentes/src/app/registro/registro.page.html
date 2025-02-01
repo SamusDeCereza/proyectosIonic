@@ -1,0 +1,43 @@
+
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+
+    <ion-card color="white2" class="ion-padding"> 
+
+      <ion-title class="ion-margin-bottom">
+        <h1>Registrate</h1>
+      </ion-title>
+  
+      <ion-item class="ion-margin" color="white">
+        <ion-input placeholder="Nombre"></ion-input>
+      </ion-item>
+
+      <div>
+
+        <ion-item class="ion-margin" color="white">
+          <ion-input placeholder="Apellido Paterno"></ion-input>
+        </ion-item>
+  
+        <ion-item class="ion-margin" color="white">
+          <ion-input placeholder="Apellido Materno"></ion-input>
+        </ion-item>
+
+      </div>
+
+      <ion-item class="ion-margin" color="white">
+        <ion-input placeholder="Email"></ion-input>
+      </ion-item>
+  
+      <ion-item class="ion-margin" color="white">
+        <ion-input type="password" placeholder="Contrasenia"></ion-input>
+      </ion-item>
+
+      <ion-button color="1" (click)="clickRegistro()">Registrarse</ion-button>
+
+      <ion-button color="1" (click)="clickIniciarSesion()">Iniciar sesion</ion-button>
+
+    </ion-card>
+
+  </div>
+</ion-content>
